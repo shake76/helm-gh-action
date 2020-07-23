@@ -45,7 +45,6 @@ main() {
   fi
 
   download
-  #lint
   package
   upload
 }
@@ -61,10 +60,6 @@ download() {
   popd >& /dev/null
   rm -rf $tmpDir
 }
-
-#lint() {
-#  helm lint ${REPO_ROOT}/${CHARTS_DIR}/*/
-#}
 
 package() {
   helm package -u ${REPO_ROOT}/${CHARTS_DIR}/*/ --destination ${CHARTS_TMP_DIR}
