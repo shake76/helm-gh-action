@@ -62,7 +62,7 @@ download() {
 }
 
 package() {
-  helm package -u ${REPO_ROOT}/helmcharts/${CHARTS_DIR}/*/ --destination ${CHARTS_TMP_DIR}
+  helm package -u ${REPO_ROOT}/helmcharts/${CHARTS_DIR}/* --destination ${CHARTS_TMP_DIR}
 }
 
 upload() {
