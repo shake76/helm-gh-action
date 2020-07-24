@@ -41,7 +41,7 @@ main() {
   fi
 
   if [[ -z "$REPO_URL" ]]; then
-      REPO_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${OWNER}/helm-charts/tree/${REPOSITORY}"
+      REPO_URL="https://${OWNER}.github.io/helm-charts/${REPOSITORY}"
   fi
 
   download
