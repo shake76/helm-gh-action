@@ -41,7 +41,7 @@ main() {
   fi
 
   if [[ -z "$REPO_URL" ]]; then
-      REPO_URL="https://x-access-token:${CR_TOKEN}@github.com/${OWNER}/${REPOSITORY}"
+      REPO_URL="https://x-access-token:${CR_TOKEN}@github.com/${OWNER}/helm-charts/${REPOSITORY}"
   fi
 
   download
@@ -62,7 +62,7 @@ download() {
 }
 
 package() {
-  cd ${REPO_ROOT}/helmcharts/${CHARTS_DIR}	
+  cd ${REPO_ROOT}/provisioning/k8s/${CHARTS_DIR}	
   helm package -u  .  --destination ${CHARTS_TMP_DIR}
 }
 
