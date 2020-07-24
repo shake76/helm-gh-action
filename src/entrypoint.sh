@@ -3,7 +3,7 @@
 set -o errexit
 set -o pipefail
 
-GITHUB_TOKEN=$1
+CR_TOKEN=$1
 CHARTS_DIR=$2
 CHARTS_URL=$3
 OWNER=$4
@@ -41,7 +41,7 @@ main() {
   fi
 
   if [[ -z "$REPO_URL" ]]; then
-      REPO_URL="https://${OWNER}.github.io/helm-charts/${REPOSITORY}"
+      REPO_URL="https://x-access-token:${CR_TOKEN}@github.com/${OWNER}/${REPOSITORY}"
   fi
 
   download
