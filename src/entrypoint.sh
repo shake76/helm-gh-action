@@ -64,7 +64,7 @@ download() {
 
 lint() {
   cd ${REPO_ROOT}/provisioning/k8s/${CHARTS_DIR}	
-  helm lint . --values ./vars/*/
+  helm lint . --values ./vars/*/values.yaml
 }
 package() {
   cd ${REPO_ROOT}/provisioning/k8s/${CHARTS_DIR}	
