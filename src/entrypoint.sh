@@ -45,6 +45,7 @@ main() {
   fi
 
   download
+  lint
   package
   upload
 }
@@ -61,6 +62,9 @@ download() {
   rm -rf $tmpDir
 }
 
+lint() {
+  helm lint ${REPO_ROOT}/${CHARTS_DIR}/ --values ${REPO_ROOT}/${CHARTS_DIR}/vars/sandbox/values.yaml
+}
 package() {
   cd ${REPO_ROOT}/provisioning/k8s/${CHARTS_DIR}	
   helm package -u  .  --destination ${CHARTS_TMP_DIR}

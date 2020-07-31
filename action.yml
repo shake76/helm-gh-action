@@ -1,6 +1,6 @@
 name: 'Helm Publisher'
 description: 'A GitHub Action for publishing Helm charts with Github Pages'
-author: 'Stefan Prodan'
+author: 'Based in Stefan Prodan helm-gh-pages project' 
 branding:
   icon: 'command'
   color: 'blue'
